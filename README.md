@@ -19,6 +19,7 @@ Full-stack QA skills that teach Claude to test like a senior QA engineer — UI 
 |---------|-------------|
 | [/qa](./commands/qa.md) | Single entry point — invoke anytime to test UI, API, DB, or write Jira tickets. Supports parallel multi-role testing. |
 | [/qa-report](./commands/qa-report.md) | Generate email-ready .md reports from accumulated QA knowledge base data. |
+| [/add-logging](./commands/add-logging.md) | Scan project tech stack, create a branch, add dev-only structured logging to frontend/backend/DB — disabled in production. |
 
 ## Install
 
@@ -100,6 +101,12 @@ brew install httpie      # Readable API exploration
 /qa-report [report type]
   → Read knowledge base → Generate email-ready .md
   → Save to e2e/reports/ → Copy-paste into email
+
+/add-logging [scope]
+  → Scan tech stack → Detect existing logging
+  → Create <username>/logs-for-testing branch
+  → Instrument each layer with dev-only logs
+  → Commit per layer → Verify build passes
 ```
 
 ### Knowledge Base (Built Automatically)
@@ -161,7 +168,8 @@ claude-qa-skills/
 │           └── bug-patterns.md
 ├── commands/
 │   ├── qa.md                  ← /qa command
-│   └── qa-report.md           ← /qa-report command
+│   ├── qa-report.md           ← /qa-report command
+│   └── add-logging.md         ← /add-logging command
 └── README.md
 ```
 
