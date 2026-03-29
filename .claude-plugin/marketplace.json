@@ -1,0 +1,25 @@
+{
+  "name": "qa-skills",
+  "owner": {
+    "name": "Deepak Kumar Tiwari",
+    "email": "deepaktiwari09@github.com"
+  },
+  "metadata": {
+    "description": "Full-stack QA skills for Claude Code — UI testing, API testing, DB optimization, and Jira story writing",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "qa-skills",
+      "description": "Full QA suite — UI flow testing with playwright-cli, API testing with curl/Hurl/hey, DB optimization for PostgreSQL/MySQL/MongoDB, and QA-friendly Jira ticket writing",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/ui-qa-testing",
+        "./skills/api-qa-testing",
+        "./skills/db-qa-testing",
+        "./skills/jira-story-writing"
+      ]
+    }
+  ]
+}
